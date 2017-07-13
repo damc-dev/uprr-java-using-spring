@@ -4,7 +4,7 @@ public class Train {
 	private String id; //cannot be Null
 	private String symbol;
 	private String trainDay;
-	private String arrived;
+	private Boolean arrived;
 	private String arrivalLocation;
 	
 	public String getId() {
@@ -31,11 +31,11 @@ public class Train {
 		this.trainDay = trainDay;
 	}
 	
-	public String getArrived() {
+	public Boolean getArrived() {
 		return arrived;
 	}
 	
-	public void setArrived(String arrived) {
+	public void setArrived(Boolean arrived) {
 		this.arrived = arrived;
 	}
 	
