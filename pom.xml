@@ -5,4 +5,17 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>Spring Training Train Trainer</name>
   <description>A Spring application for editing trains that will train us in Spring</description>
+  <dependencies>
+  	<dependency>
+  		<groupId>junit</groupId>
+  		<artifactId>junit</artifactId>
+  		<version>4.12</version>
+  		<scope>test</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-context</artifactId>
+  		<version>2.5.5</version>
+  	</dependency>
+  </dependencies>
 </project>
