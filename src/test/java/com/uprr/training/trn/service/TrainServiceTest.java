@@ -11,9 +11,15 @@ public class TrainServiceTest {
 		TrainService trainService = new TrainService();
 		
 		Train train = new Train();
+		train.setArrivalLocation("Council Bluffs");
+		train.setArrived(false);
+		train.setSymbol("MLACB");
+		train.setTrainDay("12");
 		
 		String trainId = trainService.saveTrain(train);
 		assertNotNull("Train ID should not be null", trainId);
 		
+		Train train2 = trainService.getTrain(trainId);
+		assertEquals(train, train2);
 	}
 }
