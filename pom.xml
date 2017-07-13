@@ -1,0 +1,8 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.uprr.training</groupId>
+  <artifactId>java-using-spring</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Spring Training Train Trainer</name>
+  <description>A Spring application for editing trains that will train us in Spring</description>
+</project>
