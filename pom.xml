@@ -4,6 +4,7 @@
 	<groupId>com.uprr.training</groupId>
 	<artifactId>java-using-spring</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 	<name>Spring Training Train Trainer</name>
 	<description>A Spring application for editing trains that will train us in Spring</description>
 	<properties>
@@ -264,4 +265,50 @@
 			</plugin>
 		</plugins>
 	</build>
+
+<profiles>
+		<profile>
+			<id>jetty</id>
+			<activation>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.eclipse.jetty</groupId>
+						<artifactId>jetty-maven-plugin</artifactId>
+						<version>${jetty-plugin-version}</version>
+						<configuration>
+							<httpConnector>
+								<port>8080</port>  <!-- The PORT Jetty will listen on -->
+							</httpConnector>
+							<systemProperties>
+								<systemProperty>
+									<name>jbs.logdir</name>
+									<value>./logs</value>
+								</systemProperty>
+								<systemProperty>
+									<name>jbs.name</name>
+									<value>localhost</value>
+								</systemProperty>
+								<systemProperty>
+									<name>uprr.implementation.environment</name>
+									<value>dev</value>
+								</systemProperty>
+								<systemProperty>
+									<name>log4j.configurationFile</name>
+									<value>${basedir}/src/main/resources/log4j2.xml</value>
+								</systemProperty>
+							</systemProperties>
+							<webApp>
+								<contextPath>/${app-tla}/${project.artifactId}</contextPath>
+								<overrideDescriptor>${basedir}/src/main/webapp/WEB-INF/web.xml</overrideDescriptor>
+							</webApp>
+							<!-- Uncomment to enable hot deployment scanning -->
+							<!-- scanIntervalSeconds>1</scanIntervalSeconds -->
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 </project>
