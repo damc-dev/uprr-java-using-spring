@@ -1,14 +1,26 @@
 package com.uprr.training.trn.service;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.TestExecutionListeners;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.support.DependencyInjectionTestExecutionListener;
 
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations={"classpath:training-spring-context.xml"})
+@TestExecutionListeners(DependencyInjectionTestExecutionListener.class)
 public class TrainServiceTest {
+	
+	@Autowired
+	TrainService trainService;
 	
 	@Test
 	public void testSaveTrain() throws Exception {
-		TrainService trainService = new TrainService();
 		
 		Train train = new Train();
 		train.setArrivalLocation("Council Bluffs");
