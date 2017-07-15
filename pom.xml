@@ -15,12 +15,12 @@
   	<dependency>
   		<groupId>org.springframework</groupId>
   		<artifactId>spring-context</artifactId>
-  		<version>2.5.5</version>
+  		<version>4.3.2.RELEASE</version>
   	</dependency>
   	<dependency>
   		<groupId>org.springframework</groupId>
   		<artifactId>spring-test</artifactId>
-  		<version>2.5.5</version>
+  		<version>4.3.2.RELEASE</version>
   		<scope>test</scope>
   	</dependency>
   </dependencies>
