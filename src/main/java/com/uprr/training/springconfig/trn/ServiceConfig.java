@@ -9,7 +9,7 @@ import com.uprr.training.trn.service.TrainServiceImpl;
 @Configuration
 public class ServiceConfig {
 	
-	@Bean(name="trainService")
+	@Bean
 	public TrainService createTrainService() {
 		return new TrainServiceImpl();
 	}

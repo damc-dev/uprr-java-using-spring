@@ -11,8 +11,10 @@ import org.springframework.test.context.TestExecutionListeners;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.DependencyInjectionTestExecutionListener;
 
+import com.uprr.training.springconfig.trn.ServiceConfig;
+
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations={"classpath:training-spring-context.xml"})
+@ContextConfiguration(classes={ServiceConfig.class})
 @TestExecutionListeners(DependencyInjectionTestExecutionListener.class)
 public class TrainServiceTest {
 	
