@@ -20,7 +20,7 @@
 		<mockito-version>1.10.19</mockito-version>
 
 		<jetty-plugin-version>9.3.11.v20160721</jetty-plugin-version>
-		<jetty-version>9.3.11.v20160721</jetty-version>
+		<jetty-version>9.4.24.v20191120</jetty-version>
 
 		<javax-servlet-version>3.1.0</javax-servlet-version>
 
